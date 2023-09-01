@@ -12,8 +12,8 @@ struct ContentView: View {
     var body: some View {
         Group{
             if viewModel.userSession != nil{
-//                HomeView()
-                ProfileView()
+                BaseView()
+//                ProfileView()
             }else{
                 LoginView()
             }

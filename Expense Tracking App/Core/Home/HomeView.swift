@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Binding var showMenu: Bool
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            VStack(spacing: 0){
+                HStack{
+                    Button{
+                        withAnimation{showMenu.toggle()}
+                    } label: {
+                        Image(systemName: "text.justify")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(.black)
+                            
+                    }
+                    Spacer()
+                }
+                .padding(.horizontal)
+                .padding(.vertical,10)
+                
+            }
+            Spacer()
+        }
     }
 }
 
+
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ContentView()
     }
 }

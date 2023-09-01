@@ -13,6 +13,9 @@
 		0F0501762A97C1320038DF61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0501752A97C1320038DF61 /* Preview Assets.xcassets */; };
 		0F0501842A97C2580038DF61 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0501832A97C2580038DF61 /* LoginView.swift */; };
 		0F0501862A97C3CD0038DF61 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0501852A97C3CD0038DF61 /* InputView.swift */; };
+		0F23BEFD2A9E52F5009FD6D8 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F23BEFC2A9E52F5009FD6D8 /* SideMenu.swift */; };
+		0F23BEFF2A9E59E9009FD6D8 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F23BEFE2A9E59E9009FD6D8 /* TabButton.swift */; };
+		0F50676F2AA0EA16004C050C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50676E2AA0EA16004C050C /* BaseView.swift */; };
 		0F5F836A2A9C6D0900670BBD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F83692A9C6D0900670BBD /* ProfileView.swift */; };
 		0F5F836C2A9C6EB900670BBD /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F836B2A9C6EB900670BBD /* SettingRowView.swift */; };
 		0F5F836E2A9C71E700670BBD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F836D2A9C71E700670BBD /* User.swift */; };
@@ -34,6 +37,9 @@
 		0F0501752A97C1320038DF61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F0501832A97C2580038DF61 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0F0501852A97C3CD0038DF61 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		0F23BEFC2A9E52F5009FD6D8 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		0F23BEFE2A9E59E9009FD6D8 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		0F50676E2AA0EA16004C050C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0F5F83692A9C6D0900670BBD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0F5F836B2A9C6EB900670BBD /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
 		0F5F836D2A9C71E700670BBD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -109,6 +115,8 @@
 			children = (
 				0F0501852A97C3CD0038DF61 /* InputView.swift */,
 				0F5F836B2A9C6EB900670BBD /* SettingRowView.swift */,
+				0F23BEFC2A9E52F5009FD6D8 /* SideMenu.swift */,
+				0F23BEFE2A9E59E9009FD6D8 /* TabButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 				0F0501822A97C2230038DF61 /* Profile */,
 				0F0501812A97C2170038DF61 /* Authentication */,
 				0F0501802A97C1E50038DF61 /* Root */,
+				0F50676E2AA0EA16004C050C /* BaseView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -262,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F23BEFD2A9E52F5009FD6D8 /* SideMenu.swift in Sources */,
+				0F50676F2AA0EA16004C050C /* BaseView.swift in Sources */,
 				0F0501842A97C2580038DF61 /* LoginView.swift in Sources */,
 				0F0501862A97C3CD0038DF61 /* InputView.swift in Sources */,
 				0F5F836C2A9C6EB900670BBD /* SettingRowView.swift in Sources */,
@@ -270,6 +281,7 @@
 				0F5F836E2A9C71E700670BBD /* User.swift in Sources */,
 				0F05016F2A97C1300038DF61 /* Expense_Tracking_AppApp.swift in Sources */,
 				0F5F836A2A9C6D0900670BBD /* ProfileView.swift in Sources */,
+				0F23BEFF2A9E59E9009FD6D8 /* TabButton.swift in Sources */,
 				0F8CC54F2A9CC80900B754E8 /* RegistrationView.swift in Sources */,
 				0F8CC5512A9CC86C00B754E8 /* AuthViewModel.swift in Sources */,
 			);
