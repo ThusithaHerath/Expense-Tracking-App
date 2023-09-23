@@ -8,47 +8,37 @@
 import SwiftUI
 
 struct BaseView: View {
-    @State var showMenu: Bool = false
-    
-    init(){
-        UITabBar.appearance().isHidden = true
-    }
-    
+
     @State var currentTab = "Home"
     
     //offset for both drag gesture and showing menu
     @State var offset: CGFloat = 0
-    @State var lastStoredOffset: CGFloat = 0
     
     var body: some View {
-        
-        let sideBarWidth = getRect().width - 90
         
         NavigationView{
             
             HStack(spacing: 0){
-                 
-                SideMenu(showMenu: $showMenu)
                 
                 VStack(spacing: 0){
                     TabView(selection: $currentTab){
                         
-                        HomeView(showMenu: $showMenu)
+                        HomeView()
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
-                            .tag("ExpenseTrackerLogo")
-                        Text("Search")
+                            .tag("Home")
+                        Text("Add expenses")
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
-                            .tag("Search")
-                        Text("Notification")
+                            .tag("Plus")
+                        Text("Dollar")
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
-                            .tag("Notification")
-                        Text("Messages")
+                            .tag("Dollar")
+                        ProfileView()
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
-                            .tag("Message")
+                            .tag("Gear")
                     }
                     
                     //custom tab bar
@@ -57,47 +47,21 @@ struct BaseView: View {
                         Divider()
                         
                         HStack(spacing: 0){
-                            TabButton(image: "ExpenseTrackerLogo")
-                            TabButton(image: "Search")
-                            TabButton(image: "ExpenseTrackerLogo")
-                            TabButton(image: "ExpenseTrackerLogo")
+                            TabButton(image: "Home")
+                            TabButton(image: "Plus")
+                            TabButton(image: "Dollar")
+                            TabButton(image: "Gear")
                         }
-                        .padding(.top,15)
+                        .padding(.top,10)
                     }
                 }
                 .frame(width: getRect().width)
-                .overlay(
-                    Rectangle()
-                        .fill(
-                            Color.primary
-                                .opacity(Double((offset/sideBarWidth)/5))
-                        )
-                                .ignoresSafeArea(.container, edges: .vertical)
-                                .onTapGesture {
-                                    withAnimation{
-                                        showMenu.toggle()
-                                    }
-                                }
-                        
-                )
             }
-            .frame(width: getRect().width + sideBarWidth)
-            .offset(x: -sideBarWidth / 2)
             .offset(x: offset)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
-        .animation(.easeOut, value: offset == 0)
-        .onChange(of: showMenu){ newValue in
-            if showMenu && offset == 0 {
-                offset = sideBarWidth
-                lastStoredOffset = offset
-            }
-            if !showMenu && offset == sideBarWidth{
-                offset = 0
-                lastStoredOffset = 0
-            }
-        }
+      
     }
     
     @ViewBuilder
@@ -109,8 +73,8 @@ struct BaseView: View {
                 .resizable()
                 .renderingMode(.template)
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 23, height: 22)
-                .foregroundColor(currentTab == image ? .primary : .gray)
+                .frame(width: 25, height: 25)
+                .foregroundColor(.black)
                 .frame(maxWidth: .infinity)
         }
     }

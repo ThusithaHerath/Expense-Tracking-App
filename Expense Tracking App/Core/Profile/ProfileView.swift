@@ -43,6 +43,12 @@ struct ProfileView: View {
                             .foregroundColor(.gray)
                     }
                 }
+                Section("Reports"){
+                    HStack{
+                        SettingRowView(imageName: "doc", title: "See Reports", tintColor: Color(.systemGray))
+                        Spacer()
+                    }
+                }
                 Section("Account"){
                     Button{
                         viewModel.signOut()

@@ -19,7 +19,7 @@ struct TabButton: View {
                     .resizable()
                     .renderingMode(.template)
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 22, height: 22)
+                    .frame(width: 25, height: 25)
                 Text(title)
             }
             .foregroundColor(.primary)

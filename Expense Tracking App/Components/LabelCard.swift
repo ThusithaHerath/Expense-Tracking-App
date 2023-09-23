@@ -1,32 +1,35 @@
 //
-//  SettingRowView.swift
+//  LabelCard.swift
 //  Expense Tracking App
 //
-//  Created by Thusitha Lakshan Herath on 2023-08-28.
+//  Created by Thusitha Lakshan Herath on 2023-09-14.
 //
 
 import SwiftUI
 
-struct SettingRowView: View {
+struct LabelCard: View {
     let imageName: String
     let title: String
     let tintColor: Color
+    let textColor: Color
+
     var body: some View {
-        HStack(spacing: 12){
+        HStack(spacing: 15){
             Image(systemName: imageName)
                 .imageScale(.small)
                 .font(.title)
                 .foregroundColor(tintColor)
             Text(title)
                 .font(.subheadline)
-                .foregroundColor(.black)
+                .foregroundColor(textColor)
             
         }
     }
 }
 
-struct SettingRowView_Previews: PreviewProvider {
+struct LabelCard_Previews: PreviewProvider {
     static var previews: some View {
-        SettingRowView(imageName: "gear", title: "Version", tintColor: Color(.systemGray))
+        LabelCard(imageName: "gear", title: "Version", tintColor: Color(.systemGray), textColor: Color(.systemGray))
+
     }
 }
