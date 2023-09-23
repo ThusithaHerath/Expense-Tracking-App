@@ -13,6 +13,8 @@ struct BaseView: View {
     
     //offset for both drag gesture and showing menu
     @State var offset: CGFloat = 0
+    @State private var expenses = [Expense]()
+    @State private var budget = [Budget]()
     
     var body: some View {
         
@@ -27,11 +29,11 @@ struct BaseView: View {
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
                             .tag("Home")
-                        Text("Add expenses")
+                        AddExpenses(expenses: $expenses)
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
                             .tag("Plus")
-                        Text("Dollar")
+                        AddBudget(budgets: $budget)
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
                             .tag("Dollar")
@@ -43,21 +45,17 @@ struct BaseView: View {
                     
                     //custom tab bar
                     VStack(spacing: 0){
-                        
-                        Divider()
-                        
                         HStack(spacing: 0){
                             TabButton(image: "Home")
                             TabButton(image: "Plus")
                             TabButton(image: "Dollar")
                             TabButton(image: "Gear")
                         }
-                        .padding(.top,10)
+                        
                     }
                 }
                 .frame(width: getRect().width)
             }
-            .offset(x: offset)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }

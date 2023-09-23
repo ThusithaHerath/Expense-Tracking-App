@@ -19,13 +19,12 @@ struct PieChart: View {
         GeometryReader { geometry in
                     ZStack {
                         Path { path in
-                                          let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
-                                          path.move(to: center)
-                                          path.addArc(center: center, radius: geometry.size.width / 2, startAngle: startAngle, endAngle: endAngle, clockwise: false)
-                                      }
+                               let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                               path.move(to: center)
+                               path.addArc(center: center, radius: geometry.size.width / 2, startAngle: startAngle, endAngle: endAngle, clockwise: false)
+                            }
                                       .fill(color)
                         
-                        // Position the label
                         Text(label)
                             .position(
                                 x: geometry.size.width / 2 + CGFloat(cos((startAngle + (endAngle - startAngle) / 2).radians) * 0.6 * Double(geometry.size.width) / 2),

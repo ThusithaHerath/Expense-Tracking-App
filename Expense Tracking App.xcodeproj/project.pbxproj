@@ -16,6 +16,9 @@
 		0F23BEFD2A9E52F5009FD6D8 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F23BEFC2A9E52F5009FD6D8 /* SideMenu.swift */; };
 		0F23BEFF2A9E59E9009FD6D8 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F23BEFE2A9E59E9009FD6D8 /* TabButton.swift */; };
 		0F3E6BB02ABE9AFD003739AD /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BAF2ABE9AFD003739AD /* PieChart.swift */; };
+		0F3E6BB32ABEB3C7003739AD /* AddExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BB22ABEB3C7003739AD /* AddExpenses.swift */; };
+		0F3E6BB62ABEC500003739AD /* AddBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BB52ABEC500003739AD /* AddBudget.swift */; };
+		0F3E6BB92ABECCBB003739AD /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BB82ABECCBB003739AD /* Report.swift */; };
 		0F50676F2AA0EA16004C050C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50676E2AA0EA16004C050C /* BaseView.swift */; };
 		0F5F836A2A9C6D0900670BBD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F83692A9C6D0900670BBD /* ProfileView.swift */; };
 		0F5F836C2A9C6EB900670BBD /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F836B2A9C6EB900670BBD /* SettingRowView.swift */; };
@@ -28,7 +31,6 @@
 		0F8CC54F2A9CC80900B754E8 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CC54E2A9CC80900B754E8 /* RegistrationView.swift */; };
 		0F8CC5512A9CC86C00B754E8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CC5502A9CC86C00B754E8 /* AuthViewModel.swift */; };
 		0F8CC5562A9D06D100B754E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CC5552A9D06D100B754E8 /* HomeView.swift */; };
-		0FBEC3BD2AA3939200112E9C /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBEC3BC2AA3939200112E9C /* CalenderView.swift */; };
 		0FD7856C2AB36227008984AB /* LabelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD7856B2AB36227008984AB /* LabelCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,9 @@
 		0F23BEFC2A9E52F5009FD6D8 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		0F23BEFE2A9E59E9009FD6D8 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		0F3E6BAF2ABE9AFD003739AD /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		0F3E6BB22ABEB3C7003739AD /* AddExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenses.swift; sourceTree = "<group>"; };
+		0F3E6BB52ABEC500003739AD /* AddBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudget.swift; sourceTree = "<group>"; };
+		0F3E6BB82ABECCBB003739AD /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		0F50676E2AA0EA16004C050C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0F5F83692A9C6D0900670BBD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0F5F836B2A9C6EB900670BBD /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
@@ -51,7 +56,6 @@
 		0F8CC54E2A9CC80900B754E8 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		0F8CC5502A9CC86C00B754E8 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0F8CC5552A9D06D100B754E8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0FBEC3BC2AA3939200112E9C /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 		0FD7856B2AB36227008984AB /* LabelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +136,9 @@
 		0F05017E2A97C1920038DF61 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0FBEC3BB2AA3937E00112E9C /* Calender */,
+				0F3E6BB72ABECCAC003739AD /* Reports */,
+				0F3E6BB42ABEC4E2003739AD /* Budget */,
+				0F3E6BB12ABEB3AE003739AD /* AddExpenses */,
 				0F8CC5522A9D065F00B754E8 /* Home */,
 				0F0501822A97C2230038DF61 /* Profile */,
 				0F0501812A97C2170038DF61 /* Authentication */,
@@ -175,6 +181,30 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		0F3E6BB12ABEB3AE003739AD /* AddExpenses */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E6BB22ABEB3C7003739AD /* AddExpenses.swift */,
+			);
+			path = AddExpenses;
+			sourceTree = "<group>";
+		};
+		0F3E6BB42ABEC4E2003739AD /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E6BB52ABEC500003739AD /* AddBudget.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		0F3E6BB72ABECCAC003739AD /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E6BB82ABECCBB003739AD /* Report.swift */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
 		0F5F837E2A9CC71500670BBD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,14 +228,6 @@
 				0F8CC5552A9D06D100B754E8 /* HomeView.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		0FBEC3BB2AA3937E00112E9C /* Calender */ = {
-			isa = PBXGroup;
-			children = (
-				0FBEC3BC2AA3939200112E9C /* CalenderView.swift */,
-			);
-			path = Calender;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,10 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3E6BB32ABEB3C7003739AD /* AddExpenses.swift in Sources */,
 				0F23BEFD2A9E52F5009FD6D8 /* SideMenu.swift in Sources */,
 				0F50676F2AA0EA16004C050C /* BaseView.swift in Sources */,
 				0F0501842A97C2580038DF61 /* LoginView.swift in Sources */,
 				0F0501862A97C3CD0038DF61 /* InputView.swift in Sources */,
+				0F3E6BB92ABECCBB003739AD /* Report.swift in Sources */,
 				0F5F836C2A9C6EB900670BBD /* SettingRowView.swift in Sources */,
 				0F8CC5562A9D06D100B754E8 /* HomeView.swift in Sources */,
 				0F0501712A97C1300038DF61 /* ContentView.swift in Sources */,
@@ -300,8 +324,8 @@
 				0F3E6BB02ABE9AFD003739AD /* PieChart.swift in Sources */,
 				0FD7856C2AB36227008984AB /* LabelCard.swift in Sources */,
 				0F5F836A2A9C6D0900670BBD /* ProfileView.swift in Sources */,
-				0FBEC3BD2AA3939200112E9C /* CalenderView.swift in Sources */,
 				0F23BEFF2A9E59E9009FD6D8 /* TabButton.swift in Sources */,
+				0F3E6BB62ABEC500003739AD /* AddBudget.swift in Sources */,
 				0F8CC54F2A9CC80900B754E8 /* RegistrationView.swift in Sources */,
 				0F8CC5512A9CC86C00B754E8 /* AuthViewModel.swift in Sources */,
 			);
