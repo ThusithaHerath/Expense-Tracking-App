@@ -16,6 +16,14 @@ struct AddExpenses: View {
      @State private var amount = ""
      @State private var description = ""
      @State private var location = ""
+    
+    var formIsValid: Bool {
+         return
+             !category.isEmpty &&
+             !amount.isEmpty &&
+             !description.isEmpty &&
+             !location.isEmpty
+     }
  
     var body: some View {
         VStack() {
@@ -57,11 +65,17 @@ struct AddExpenses: View {
                        .foregroundColor(.white)
                        .cornerRadius(8)
                        .frame(width: 200)
+                       .disabled(!formIsValid)
+                       .opacity(formIsValid ? 1.0 : 0.5)
                    }
                    .padding()
 
     }
 }
+
+
+
+
 
 struct AddExpenses_Previews: PreviewProvider {
     @State static var dummyExpenses: [Expense] = []

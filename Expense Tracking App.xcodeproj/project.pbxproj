@@ -19,6 +19,9 @@
 		0F3E6BB32ABEB3C7003739AD /* AddExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BB22ABEB3C7003739AD /* AddExpenses.swift */; };
 		0F3E6BB62ABEC500003739AD /* AddBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BB52ABEC500003739AD /* AddBudget.swift */; };
 		0F3E6BB92ABECCBB003739AD /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BB82ABECCBB003739AD /* Report.swift */; };
+		0F3E6BBB2ABFFF24003739AD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BBA2ABFFF24003739AD /* Category.swift */; };
+		0F3E6BBF2ABFFF97003739AD /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BBE2ABFFF97003739AD /* CategoryViewModel.swift */; };
+		0F3E6BC22AC0134E003739AD /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BC12AC0134E003739AD /* BudgetViewModel.swift */; };
 		0F50676F2AA0EA16004C050C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50676E2AA0EA16004C050C /* BaseView.swift */; };
 		0F5F836A2A9C6D0900670BBD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F83692A9C6D0900670BBD /* ProfileView.swift */; };
 		0F5F836C2A9C6EB900670BBD /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F836B2A9C6EB900670BBD /* SettingRowView.swift */; };
@@ -48,6 +51,9 @@
 		0F3E6BB22ABEB3C7003739AD /* AddExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenses.swift; sourceTree = "<group>"; };
 		0F3E6BB52ABEC500003739AD /* AddBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudget.swift; sourceTree = "<group>"; };
 		0F3E6BB82ABECCBB003739AD /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		0F3E6BBA2ABFFF24003739AD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		0F3E6BBE2ABFFF97003739AD /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		0F3E6BC12AC0134E003739AD /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
 		0F50676E2AA0EA16004C050C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0F5F83692A9C6D0900670BBD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0F5F836B2A9C6EB900670BBD /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				0F5F836D2A9C71E700670BBD /* User.swift */,
+				0F3E6BBA2ABFFF24003739AD /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +199,8 @@
 		0F3E6BB42ABEC4E2003739AD /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				0F3E6BC02AC01330003739AD /* BudgetViewModel */,
+				0F3E6BBD2ABFFF74003739AD /* CategoryViewModel */,
 				0F3E6BB52ABEC500003739AD /* AddBudget.swift */,
 			);
 			path = Budget;
@@ -203,6 +212,22 @@
 				0F3E6BB82ABECCBB003739AD /* Report.swift */,
 			);
 			path = Reports;
+			sourceTree = "<group>";
+		};
+		0F3E6BBD2ABFFF74003739AD /* CategoryViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E6BBE2ABFFF97003739AD /* CategoryViewModel.swift */,
+			);
+			path = CategoryViewModel;
+			sourceTree = "<group>";
+		};
+		0F3E6BC02AC01330003739AD /* BudgetViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E6BC12AC0134E003739AD /* BudgetViewModel.swift */,
+			);
+			path = BudgetViewModel;
 			sourceTree = "<group>";
 		};
 		0F5F837E2A9CC71500670BBD /* View */ = {
@@ -312,15 +337,18 @@
 			files = (
 				0F3E6BB32ABEB3C7003739AD /* AddExpenses.swift in Sources */,
 				0F23BEFD2A9E52F5009FD6D8 /* SideMenu.swift in Sources */,
+				0F3E6BBB2ABFFF24003739AD /* Category.swift in Sources */,
 				0F50676F2AA0EA16004C050C /* BaseView.swift in Sources */,
 				0F0501842A97C2580038DF61 /* LoginView.swift in Sources */,
 				0F0501862A97C3CD0038DF61 /* InputView.swift in Sources */,
 				0F3E6BB92ABECCBB003739AD /* Report.swift in Sources */,
 				0F5F836C2A9C6EB900670BBD /* SettingRowView.swift in Sources */,
 				0F8CC5562A9D06D100B754E8 /* HomeView.swift in Sources */,
+				0F3E6BC22AC0134E003739AD /* BudgetViewModel.swift in Sources */,
 				0F0501712A97C1300038DF61 /* ContentView.swift in Sources */,
 				0F5F836E2A9C71E700670BBD /* User.swift in Sources */,
 				0F05016F2A97C1300038DF61 /* Expense_Tracking_AppApp.swift in Sources */,
+				0F3E6BBF2ABFFF97003739AD /* CategoryViewModel.swift in Sources */,
 				0F3E6BB02ABE9AFD003739AD /* PieChart.swift in Sources */,
 				0FD7856C2AB36227008984AB /* LabelCard.swift in Sources */,
 				0F5F836A2A9C6D0900670BBD /* ProfileView.swift in Sources */,
