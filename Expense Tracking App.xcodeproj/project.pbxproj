@@ -22,6 +22,8 @@
 		0F3E6BBB2ABFFF24003739AD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BBA2ABFFF24003739AD /* Category.swift */; };
 		0F3E6BBF2ABFFF97003739AD /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BBE2ABFFF97003739AD /* CategoryViewModel.swift */; };
 		0F3E6BC22AC0134E003739AD /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BC12AC0134E003739AD /* BudgetViewModel.swift */; };
+		0F3E6BC52AC024C1003739AD /* AddExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BC42AC024C1003739AD /* AddExpenseViewModel.swift */; };
+		0F3E6BC82AC08A27003739AD /* IncomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E6BC72AC08A27003739AD /* IncomeViewModel.swift */; };
 		0F50676F2AA0EA16004C050C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50676E2AA0EA16004C050C /* BaseView.swift */; };
 		0F5F836A2A9C6D0900670BBD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F83692A9C6D0900670BBD /* ProfileView.swift */; };
 		0F5F836C2A9C6EB900670BBD /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F836B2A9C6EB900670BBD /* SettingRowView.swift */; };
@@ -54,6 +56,8 @@
 		0F3E6BBA2ABFFF24003739AD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0F3E6BBE2ABFFF97003739AD /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		0F3E6BC12AC0134E003739AD /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
+		0F3E6BC42AC024C1003739AD /* AddExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModel.swift; sourceTree = "<group>"; };
+		0F3E6BC72AC08A27003739AD /* IncomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeViewModel.swift; sourceTree = "<group>"; };
 		0F50676E2AA0EA16004C050C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0F5F83692A9C6D0900670BBD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0F5F836B2A9C6EB900670BBD /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 		0F3E6BB12ABEB3AE003739AD /* AddExpenses */ = {
 			isa = PBXGroup;
 			children = (
+				0F3E6BC32AC024A1003739AD /* AddExpenseViewModel */,
 				0F3E6BB22ABEB3C7003739AD /* AddExpenses.swift */,
 			);
 			path = AddExpenses;
@@ -199,6 +204,7 @@
 		0F3E6BB42ABEC4E2003739AD /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				0F3E6BC62AC08A04003739AD /* IncomeViewModel */,
 				0F3E6BC02AC01330003739AD /* BudgetViewModel */,
 				0F3E6BBD2ABFFF74003739AD /* CategoryViewModel */,
 				0F3E6BB52ABEC500003739AD /* AddBudget.swift */,
@@ -228,6 +234,22 @@
 				0F3E6BC12AC0134E003739AD /* BudgetViewModel.swift */,
 			);
 			path = BudgetViewModel;
+			sourceTree = "<group>";
+		};
+		0F3E6BC32AC024A1003739AD /* AddExpenseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E6BC42AC024C1003739AD /* AddExpenseViewModel.swift */,
+			);
+			path = AddExpenseViewModel;
+			sourceTree = "<group>";
+		};
+		0F3E6BC62AC08A04003739AD /* IncomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E6BC72AC08A27003739AD /* IncomeViewModel.swift */,
+			);
+			path = IncomeViewModel;
 			sourceTree = "<group>";
 		};
 		0F5F837E2A9CC71500670BBD /* View */ = {
@@ -336,7 +358,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F3E6BB32ABEB3C7003739AD /* AddExpenses.swift in Sources */,
+				0F3E6BC52AC024C1003739AD /* AddExpenseViewModel.swift in Sources */,
 				0F23BEFD2A9E52F5009FD6D8 /* SideMenu.swift in Sources */,
+				0F3E6BC82AC08A27003739AD /* IncomeViewModel.swift in Sources */,
 				0F3E6BBB2ABFFF24003739AD /* Category.swift in Sources */,
 				0F50676F2AA0EA16004C050C /* BaseView.swift in Sources */,
 				0F0501842A97C2580038DF61 /* LoginView.swift in Sources */,

@@ -25,6 +25,7 @@ struct PieChart: View {
                             }
                                       .fill(color)
                         
+                        // Position the label
                         Text(label)
                             .position(
                                 x: geometry.size.width / 2 + CGFloat(cos((startAngle + (endAngle - startAngle) / 2).radians) * 0.6 * Double(geometry.size.width) / 2),

@@ -13,7 +13,7 @@ struct BaseView: View {
     
     //offset for both drag gesture and showing menu
     @State var offset: CGFloat = 0
-    @State private var expenses = [Expense]()
+//    @State private var expenses = [Expense]()
     @State private var budget = [Budget]()
     
     var body: some View {
@@ -29,7 +29,7 @@ struct BaseView: View {
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
                             .tag("Home")
-                        AddExpenses(expenses: $expenses)
+                        AddExpenses()
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
                             .tag("Plus")

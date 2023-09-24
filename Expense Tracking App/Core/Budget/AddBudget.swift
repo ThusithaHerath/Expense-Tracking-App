@@ -13,6 +13,7 @@ struct AddBudget: View {
     @State private var categoryName = ""
     @State private var category = ""
     @State private var amount = ""
+    @State private var income = ""
     @State private var period = Budget.Period.weekly
     //display alert message
     @State private var showAlert = false
@@ -22,6 +23,7 @@ struct AddBudget: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @StateObject private var categoryViewModel = CategoryViewModel()
     @StateObject private var budgetViewModel = BudgetViewModel()
+    @StateObject private var incomeViewModel = IncomeViewModel()
 
     
     var formIsValid: Bool {
@@ -33,8 +35,49 @@ struct AddBudget: View {
          return
         !categoryName.isEmpty
      }
+    var incomeFromIsValid: Bool {
+        return !income.isEmpty
+    }
         var body: some View {
             VStack(spacing: 10) {
+                VStack{
+                    Text("Add your income")
+                        .font(.headline)
+
+                    TextField("Income (e.g., 200000.00)", text: $income)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    
+                    Button("Add income") {
+                        if let userId = viewModel.userSession?.uid,let incomeAmount = Double(income) {
+                            Task {
+                                await incomeViewModel.addIncome(for: userId, income: incomeAmount)
+                                // Reset text field
+                                income = ""
+                                
+                                // Trigger the success alert
+                                alertMessage = "Income added successfully!"
+                                showAlert = true
+                            }
+                        }
+                    }
+                    .padding(10)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                    .frame(width: 200)
+                    .disabled(!incomeFromIsValid)
+                    .opacity(incomeFromIsValid ? 1.0 : 0.5)
+                    
+                }
+                .padding(10)
+                .background(Color.white)
+                .cornerRadius(10)
+                .shadow(color: .gray.opacity(0.2), radius: 10, x: 0, y: 5)
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Success"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                }
+                
                 VStack{
                     Text("Add new category")
                         .font(.headline)
@@ -75,7 +118,7 @@ struct AddBudget: View {
                 }
                 
                 VStack {
-                    Text("Set Your Budget")
+                    Text("Set your budget")
                         .font(.headline)
                     
                     HStack {
@@ -112,17 +155,16 @@ struct AddBudget: View {
                         .padding()
 
                     Button("Set Budget") {
-                        if let userId = viewModel.userSession?.uid,
-                           let budgetAmount = Double(amount) {
-                            let currentCategoryName = category
-                            Task {
-                                await budgetViewModel.addBudget(for:userId, category: category, amount: budgetAmount, period: period)
-                                category = ""
-                                amount = ""
-                                
-                                // Trigger the success alert
-                                alertMessage = "Budget for \(currentCategoryName) added successfully!"
-                                showAlert = true
+                        if let userId = viewModel.userSession?.uid, let budgetAmount = Double(amount) {
+                        let currentCategoryName = categoryName
+                        Task {
+                            await budgetViewModel.addBudget(for: userId, category: category, amount: budgetAmount, period: period)
+                            // Reset text field
+                            amount = ""
+                                                   
+                            // Trigger the success alert
+                            alertMessage = "Budget added successfully!"
+                            showAlert = true
                             }
                         }
                     }

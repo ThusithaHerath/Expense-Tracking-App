@@ -11,6 +11,8 @@ struct HomeView: View {
     let income: Double = 500.00
     let expenses: Double = 300.00
     let balance: Double = 200.00
+    
+    
     @EnvironmentObject var viewModel: AuthViewModel
     
     // Calculate total and angles
@@ -27,7 +29,6 @@ struct HomeView: View {
     }
     
     var body: some View {
-        if let user = viewModel.currentUser{
             VStack(spacing: 10){
                 Text("Dashboard")
                     .padding(.top,5)
@@ -65,8 +66,8 @@ struct HomeView: View {
                     Section(){
                         ZStack {
                             PieChart(startAngle: .zero, endAngle: incomeAngle, color: .green, label: "Income:\(income)")
-                            PieChart(startAngle: incomeAngle, endAngle: incomeAngle + expensesAngle, color: .red, label: "Expenses: ")
-                            PieChart(startAngle: incomeAngle + expensesAngle, endAngle: .degrees(360), color: .blue, label: "Balance:")
+                            PieChart(startAngle: incomeAngle, endAngle: incomeAngle + expensesAngle, color: .red, label: "Expenses:\(expenses)")
+                            PieChart(startAngle: incomeAngle + expensesAngle, endAngle: .degrees(360), color: .blue, label: "Balance:\(balance)")
                         }
                         .frame(height: 300)
                         .padding()
@@ -76,7 +77,6 @@ struct HomeView: View {
                
             }
         }
-    }
 }
 
 
