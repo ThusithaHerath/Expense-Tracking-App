@@ -13,10 +13,14 @@ protocol AuthenticationFormProtocol{
     var formIsValid: Bool {get}
 }
 
+
+
 @MainActor
 class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    
+
     
     init(){
         self.userSession = Auth.auth().currentUser
@@ -55,7 +59,19 @@ class AuthViewModel: ObservableObject{
         }
     }
     func deleteAccount(){
-        
+        let user = Auth.auth().currentUser
+           if let user = user {
+               user.delete { error in
+                   if let error = error {
+                       print("DEBUG: Failed to delete account with error \(error.localizedDescription)")
+                   } else {
+                       self.signOut()
+                       print("DEBUG: Account deleted successfully")
+                   }
+               }
+           } else {
+               print("DEBUG: No user is currently signed in")
+           }
     }
     func fetchUser() async {
         guard let uid = Auth.auth().currentUser?.uid else {return}

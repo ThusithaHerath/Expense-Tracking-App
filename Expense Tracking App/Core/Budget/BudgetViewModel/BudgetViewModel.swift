@@ -27,6 +27,8 @@ class BudgetViewModel: ObservableObject {
                     "userId": userId,
                     "category": category,
                     "amount": amount,
+                    "Budget_expenses": 0.0, 
+                    "balance": amount - 0.0,
                     "period": period.rawValue
                 ]
                 

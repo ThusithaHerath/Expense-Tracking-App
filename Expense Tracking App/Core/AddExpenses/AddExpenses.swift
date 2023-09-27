@@ -18,7 +18,9 @@ struct AddExpenses: View {
     @State private var location = ""
     //display alert message
     @State private var showAlert = false
-    @State private var alertMessage = ""
+    @State private var showError = false
+    @State private var errorMessage = ""
+
 
     
     @EnvironmentObject var viewModel: AuthViewModel
@@ -93,9 +95,9 @@ struct AddExpenses: View {
                                 location = ""
                                 description = ""
                                                        
-                                // Trigger the success alert
-                                alertMessage = "Expenses added successfully!"
-                                showAlert = true
+                                errorMessage = "Expenses added successfully!"
+                                showError = true
+
                                 }
                             }
                         }
@@ -107,9 +109,15 @@ struct AddExpenses: View {
                         .disabled(!formIsValid)
                         .opacity(formIsValid ? 1.0 : 0.5)
                         }
-                        .alert(isPresented: $showAlert) {
-                            Alert(title: Text("Success"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+               
+                    .alert(isPresented: $showError) {
+                        if !errorMessage.isEmpty {
+                            return Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+                        } else {
+                            return Alert(title: Text("Success"), message: Text("Expenses added successfully!"), dismissButton: .default(Text("OK")))
                         }
+                    }
+
                     
                     }
                 .onAppear {

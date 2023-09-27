@@ -10,6 +10,11 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var isEmailIncorrect = false
+    @State private var isPasswordIncorrect = false
+    @State private var emailErrorMessage = ""
+    @State private var passwordErrorMessage = ""
+
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {

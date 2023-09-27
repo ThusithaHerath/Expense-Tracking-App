@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @State private var showingDeleteConfirmationAlert = false
+
     
     var body: some View {
         if let user = viewModel.currentUser{
@@ -57,9 +59,19 @@ struct ProfileView: View {
                     }
                     
                     Button{
-                        print("Delete account..")
+                        showingDeleteConfirmationAlert = true
                     } label: {
                         SettingRowView(imageName: "xmark.circle.fill", title: "Delete Account", tintColor: .red)
+                    }.alert(isPresented: $showingDeleteConfirmationAlert) {
+                        Alert(
+                            title: Text("Delete Account"),
+                            message: Text("Are you sure you want to delete your account? This action cannot be undone."),
+                            primaryButton: .destructive(Text("Delete")) {
+                                // Call the deleteAccount function here
+                                viewModel.deleteAccount()
+                            },
+                            secondaryButton: .cancel()
+                        )
                     }
                     
                 }
