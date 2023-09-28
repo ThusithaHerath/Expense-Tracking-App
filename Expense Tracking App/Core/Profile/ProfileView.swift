@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @State private var showingDeleteConfirmationAlert = false
+    @State private var isShowingReports = false
 
     
     var body: some View {
@@ -49,6 +50,14 @@ struct ProfileView: View {
                     HStack{
                         SettingRowView(imageName: "doc", title: "See Reports", tintColor: Color(.systemGray))
                         Spacer()
+                        NavigationLink(destination: ReportView(), isActive: $isShowingReports) {
+                           EmptyView()
+                        }
+                        .hidden()
+                
+                    }
+                    .onTapGesture {
+                        isShowingReports = true  // Activate the NavigationLink when tapped
                     }
                 }
                 Section("Account"){

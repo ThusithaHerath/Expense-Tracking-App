@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 struct Category: Identifiable, Codable {
-    let id: String
+    @DocumentID var id: String?
     let userId: String
-    let categoryName: String
+    var categoryName: String
 }

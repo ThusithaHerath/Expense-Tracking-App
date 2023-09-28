@@ -126,7 +126,9 @@ struct AddBudget: View {
                             .font(.headline)
                         
                         HStack {
-
+                               Text("Select Category")
+                                  .frame(width: 100, alignment: .leading)
+                            
                                Picker("Category", selection: $category) {
                                    ForEach(categoryViewModel.categories, id: \.self) { categoryName in
                                        Text(categoryName).tag(categoryName)
@@ -207,14 +209,3 @@ struct AddBudget_Previews: PreviewProvider {
     }
 }
 
-struct Budget: Identifiable {
-    let id: UUID
-    var category: String
-    var amount: Double
-    var period: Period
-
-    enum Period: String, CaseIterable {
-        case weekly = "Weekly"
-        case monthly = "Monthly"
-    }
-}
